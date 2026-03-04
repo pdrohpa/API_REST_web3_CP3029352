@@ -18,8 +18,11 @@ const Pedido = sequelize.define('Pedido', {
   clienteId: {
     type: DataTypes.INTEGER,
     allowNull: false
-    // Não há FK real no banco – a integridade é garantida pela chamada HTTP ao cliente-service
-  }
+  },
+  produtos: {
+        type: DataTypes.JSON, 
+        allowNull: false
+    }
 }, {
   timestamps: true
 });
